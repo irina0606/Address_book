@@ -15,7 +15,7 @@ public class Main {
 
 
     public static void main(String[] args) {
-            // To Do Create a director
+        // To Do Create a director
 
         //1. I create data
 
@@ -27,19 +27,17 @@ public class Main {
         String phone;
         String job;
 
-        int[]ids={1,2,3,4,5,6,7,8,9,10};
-        String[] firstNames= {"Anna", "Vera", "Tanya", "Galina", "Julia", "Victor", "Alex", "Serge", "Boris", "Den"};
-        String[] lastNames= {"Blue", "Red", "Yellow","Brown", "Pink", "Black", "White", "Green", "Grey", "Silver"};
-        String[] jobs={"Doctor", "Nurse", "Surgeon", "Psychotherapist", "Dentist", "Urologist", "Cardiologist", "Endocrinologist", "Pediatrician", "Dermatologist"};
-        char[] sexes={'M', 'F'};
-        String[] emails= {"AB@gmail.com","VR@gmail.com","TY@gmail.com","GB@gmail.com","JP@gmail.com","VB@gmail.com","AW@gmail.com","SG@gmail.com","BG@gmail.com", "DS@gmail.com"};
+        int[] ids = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+        String[] firstNames = {"Anna", "Vera", "Tanya", "Galina", "Julia", "Victor", "Alex", "Serge", "Boris", "Den"};
+        String[] lastNames = {"Blue", "Red", "Yellow", "Brown", "Pink", "Black", "White", "Green", "Grey", "Silver"};
+        String[] jobs = {"Doctor", "Nurse", "Surgeon", "Psychotherapist", "Dentist", "Urologist", "Cardiologist", "Endocrinologist", "Pediatrician", "Dermatologist"};
+        char[] sexes = {'M', 'F'};
+        String[] emails = {"AB@gmail.com", "VR@gmail.com", "TY@gmail.com", "GB@gmail.com", "JP@gmail.com", "VB@gmail.com", "AW@gmail.com", "SG@gmail.com", "BG@gmail.com", "DS@gmail.com"};
 
         //2. Combine a person`s data
 
-        Person p= new Person();
-        Object person = ids[0]+".  | "+firstNames[0]+" | "+lastNames[0]+" | "+jobs[0]+" | "+sexes[1]+" | "+emails[0]+" | ";
-
-
+        Person p = new Person();
+        Object person = ids[0] + ".  | " + firstNames[0] + " | " + lastNames[0] + " | " + jobs[0] + " | " + sexes[1] + " | " + emails[0] + " | ";
 
 
         //3. I create address
@@ -49,13 +47,13 @@ public class Main {
         String state;
         int zip;
 
-        int[] houses={10,11,12,13,14,15,16,17,18,19};
-        String[] streets={"Orange St", "Apple St", "Plum St", "Grape St", "Ginger St", "Mango St", "Appricot St", "Cherry St", "Blueberry St", "Strawberry St" };
-        String[] cities= {"Austin","Dallas","Tampa","Orlando","Clearwater","Brandon","Panama","Miami","Waco","Lakeland"};
-        String[] states= {"TX","TX","FL","FL","FL","FL","FL","FL","TX","FL"};
-        int[] zips={12345,23456,34567,45678,56789,67890,78901,89012,90123,11234};
+        int[] houses = {10, 11, 12, 13, 14, 15, 16, 17, 18, 19};
+        String[] streets = {"Orange St", "Apple St", "Plum St", "Grape St", "Ginger St", "Mango St", "Appricot St", "Cherry St", "Blueberry St", "Strawberry St"};
+        String[] cities = {"Austin", "Dallas", "Tampa", "Orlando", "Clearwater", "Brandon", "Panama", "Miami", "Waco", "Lakeland"};
+        String[] states = {"TX", "TX", "FL", "FL", "FL", "FL", "FL", "FL", "TX", "FL"};
+        int[] zips = {12345, 23456, 34567, 45678, 56789, 67890, 78901, 89012, 90123, 11234};
 
-        Address addr =new Address();
+        Address addr = new Address();
 
         Object address = houses[0] + " " + streets[0] + ", " + cities[0] + ", " + states[0] + ", " + zips[0];
 
@@ -67,19 +65,21 @@ public class Main {
 
         // create dob and phone number
 
-        NumberFormatException phoneNum= new NumberFormatException("###-###-####");
-        NumberFormatException dob= new NumberFormatException("MM/DD/YYYY");
-
+        NumberFormatException phoneNum = new NumberFormatException("###-###-####");
+        NumberFormatException dob = new NumberFormatException("MM/DD/YYYY");
 
 
         //System.out.print("\n"+phoneNums);
 
-        
-
-
-
-
-        }
-
 
     }
+
+    public static Person createPerson(int id, String firstName, String lastName) {
+        Person person = new Person();
+        person.id = id;
+        person.firstName = firstName;
+        person.lastName = lastName;
+        return person;
+
+    }
+}
